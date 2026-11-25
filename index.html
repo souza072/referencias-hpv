@@ -140,7 +140,7 @@
       position:relative;
       z-index:1;
       display:grid;
-      grid-template-columns:minmax(0,1fr);
+      grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);
       gap:26px;
       padding:clamp(28px,4.7vw,52px);
       align-items:end;
@@ -318,7 +318,7 @@
       font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:12px;text-align:center;
     }
 
-    footer{margin-top:32px;border-top:1px solid var(--line);padding:20px 0 26px;color:#685b77;font-size:12px;letter-spacing:.09em;text-transform:uppercase;text-align:center}
+    footer{padding:6px 0 26px;color:#685b77;font-size:12px;letter-spacing:.09em;text-transform:uppercase;text-align:center}
 
     @media (max-width: 920px){
       .hero-inner,.cards,.footer-box{grid-template-columns:1fr}
@@ -330,7 +330,7 @@
       .brand-block{align-items:flex-start}
       .crest{width:58px;height:58px;border-radius:16px}
       .crest svg{width:33px;height:33px}
-      .identity .name{font-size:clamp(20px,5vw,24px)}
+      .identity .name{font-size:24px}
       .hero{border-radius:26px}
       .hero-inner{padding:24px}
       .cards{grid-template-columns:1fr}
@@ -339,7 +339,6 @@
       .number{width:46px;height:46px;border-radius:16px;font-size:21px}
       .footer-box{padding:20px}
     }
-    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
     @media (prefers-color-scheme: dark){
       :root{
         color-scheme:dark;
@@ -360,8 +359,6 @@
       .section-side,.footer-box{background:linear-gradient(180deg,#281c37,#30233f)}
       .pill{background:#352647;border-color:#513d68;color:#ead5ff}
       .meta span{background:#352647;border-color:#493b5c;color:#d4c3e5}
-      .identity .name,.section-head h2{color:#f8f0ff}
-      .section-side strong{color:#d8b8ff}
       .cta-note{color:#c9bdd8}
       .footer-tag{background:#352647;border-color:#513d68;color:#ead5ff}
     }
@@ -380,7 +377,8 @@
             </svg>
           </div>
           <div class="identity">
-            <span class="name">Universidade São Judas</span>
+            <span class="uni">Universidade</span>
+            <span class="name">São Judas Tadeu</span>
             <div class="campus">
               <span class="chip">Odontologia</span>
               <span class="chip">Unidade Vila Leopoldina</span>
@@ -403,6 +401,27 @@
               <a class="btn btn-secondary" href="https://doi.org/10.33448/rsd-v13i2.44973" target="_blank" rel="noopener noreferrer">Abrir artigo principal</a>
             </div>
           </div>
+
+          <aside class="hero-panel" aria-label="Resumo da página">
+            <div class="panel-top">
+              <strong>Destaques</strong>
+              <span class="stat">02</span>
+            </div>
+            <ul class="mini-list">
+              <li>
+                <b>Interface renovada</b>
+                <span>Visual acadêmico mais elegante, com destaque institucional e leitura facilitada.</span>
+              </li>
+              <li>
+                <b>Referências organizadas</b>
+                <span>Artigos apresentados em cartões claros, com acesso rápido e linguagem visual mais forte.</span>
+              </li>
+              <li>
+                <b>Experiência responsiva</b>
+                <span>Layout pensado para celular, notebook e tela de apresentação.</span>
+              </li>
+            </ul>
+          </aside>
         </div>
       </section>
 
@@ -462,6 +481,14 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <section class="footer-box" aria-label="Rodapé informativo">
+        <div>
+          <h4>Material de apoio à apresentação</h4>
+          <p>Interface desenvolvida para valorizar a apresentação do trabalho, reforçar a identidade do curso e facilitar o acesso às referências durante a exposição em sala.</p>
+        </div>
+        <div class="footer-tag">São Judas · Vila Leopoldina</div>
       </section>
     </main>
 
