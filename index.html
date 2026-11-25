@@ -10,12 +10,12 @@
       color-scheme: light;
       --bg:#ffffff;
       --surface:#ffffff;
-      --surface-2:#faf7fd;
+      --surface-2:#ffffff;
       --hero-1:#482271;
       --hero-2:#663599;
       --hero-3:#8555b3;
-      --text:#302140;
-      --muted:#685b77;
+      --text:#482271;
+      --muted:#674c82;
       --line:#e6dff0;
       --accent:#cba5f1;
       --accent-2:#7746a5;
@@ -32,9 +32,7 @@
     body{
       margin:0;
       font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(133,85,179,.12), transparent 28%),
-        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      background:#ffffff;
       color:var(--text);
       line-height:1.6;
       -webkit-font-smoothing:antialiased;
@@ -140,7 +138,7 @@
       position:relative;
       z-index:1;
       display:grid;
-      grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);
+      grid-template-columns:minmax(0,1fr);
       gap:26px;
       padding:clamp(28px,4.7vw,52px);
       align-items:end;
@@ -152,7 +150,7 @@
       border-radius:999px;
       background:rgba(255,255,255,.08);
       backdrop-filter: blur(8px);
-      font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#f4eaff;
+      font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#ffffff;
       margin-bottom:18px;
     }
     .eyebrow .spark{width:8px;height:8px;border-radius:50%;background:#e7c9ff;box-shadow:0 0 0 4px rgba(231,201,255,.18)}
@@ -169,7 +167,7 @@
       max-width:760px;
       font-size:clamp(16px,2vw,19px);
       line-height:1.7;
-      color:#f8f0ff;
+      color:#ffffff;
     }
     .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
     .btn{
@@ -339,29 +337,13 @@
       .number{width:46px;height:46px;border-radius:16px;font-size:21px}
       .footer-box{padding:20px}
     }
-    @media (prefers-color-scheme: dark){
-      :root{
-        color-scheme:dark;
-        --bg:#1c1328;
-        --surface:#2b2039;
-        --surface-2:#30233f;
-        --text:#f5eefc;
-        --muted:#c9bdd8;
-        --line:#493b5c;
-        --shadow:0 18px 40px rgba(0,0,0,.22);
-      }
-      body{
-        background:radial-gradient(circle at top right, rgba(133,85,179,.12), transparent 28%), linear-gradient(180deg, #1c1328 0%, #20162d 100%);
-      }
-      .topbar-inner{background:rgba(43,32,57,.8);border-color:rgba(255,255,255,.04)}
-      .chip{background:#352647;border-color:#493b5c;color:#e5d8f1}
-      .chip.gold{background:#39264e;border-color:#684987;color:#ead5ff}
-      .section-side,.footer-box{background:linear-gradient(180deg,#281c37,#30233f)}
-      .pill{background:#352647;border-color:#513d68;color:#ead5ff}
-      .meta span{background:#352647;border-color:#493b5c;color:#d4c3e5}
-      .cta-note{color:#c9bdd8}
-      .footer-tag{background:#352647;border-color:#513d68;color:#ead5ff}
-    }
+
+      /* Contraste fixo branco e roxo; mantém a estrutura Premium. */
+    .topbar-inner{background:#fff;border-color:var(--line)}
+    .hero,.hero .lead,.hero .eyebrow,.btn-secondary,.crest{color:#fff}
+    .chip,.chip.gold,.pill,.meta span{background:#fff;color:#7040a1;border-color:#e5d9f1}
+    .section-head .kicker,footer{color:var(--muted)}
+    footer{margin-top:28px}
   </style>
 </head>
 <body>
@@ -378,7 +360,7 @@
           </div>
           <div class="identity">
             <span class="uni">Universidade</span>
-            <span class="name">São Judas Tadeu</span>
+            <span class="name">São Judas</span>
             <div class="campus">
               <span class="chip">Odontologia</span>
               <span class="chip">Unidade Vila Leopoldina</span>
@@ -402,26 +384,6 @@
             </div>
           </div>
 
-          <aside class="hero-panel" aria-label="Resumo da página">
-            <div class="panel-top">
-              <strong>Destaques</strong>
-              <span class="stat">02</span>
-            </div>
-            <ul class="mini-list">
-              <li>
-                <b>Interface renovada</b>
-                <span>Visual acadêmico mais elegante, com destaque institucional e leitura facilitada.</span>
-              </li>
-              <li>
-                <b>Referências organizadas</b>
-                <span>Artigos apresentados em cartões claros, com acesso rápido e linguagem visual mais forte.</span>
-              </li>
-              <li>
-                <b>Experiência responsiva</b>
-                <span>Layout pensado para celular, notebook e tela de apresentação.</span>
-              </li>
-            </ul>
-          </aside>
         </div>
       </section>
 
@@ -483,13 +445,6 @@
         </div>
       </section>
 
-      <section class="footer-box" aria-label="Rodapé informativo">
-        <div>
-          <h4>Material de apoio à apresentação</h4>
-          <p>Interface desenvolvida para valorizar a apresentação do trabalho, reforçar a identidade do curso e facilitar o acesso às referências durante a exposição em sala.</p>
-        </div>
-        <div class="footer-tag">São Judas · Vila Leopoldina</div>
-      </section>
     </main>
 
     <footer>Odontologia · Referências acadêmicas</footer>
